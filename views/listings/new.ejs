@@ -2,7 +2,7 @@
 <div class="row mt-3">
   <div class="col-8 offset-2">
     <h3>Create new Listing</h3>
-    <form action="/listings" method="post">
+    <form action="/listings" method="post" novalidate class="needs-validation">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input
@@ -10,7 +10,10 @@
           name="listing[title]"
           placeholder="Add a catchy title"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter a title</div>
       </div>
 
       <div class="mb-3">
@@ -19,7 +22,10 @@
           name="listing[description]"
           placeholder="Enter description"
           class="form-control"
+          required
         ></textarea>
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Write a 2-3 line description</div>
       </div>
 
       <div class="mb-3">
@@ -40,7 +46,10 @@
             name="listing[price]"
             placeholder="Enter price"
             class="form-control"
+            required
           />
+          <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Enter a valid price</div>
         </div>
 
         <div class="mb-3 col-md-8">
@@ -50,7 +59,10 @@
             name="listing[country]"
             placeholder="Enter country"
             class="form-control"
+            required
           />
+          <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter a country</div>
         </div>
       </div>
 
@@ -61,7 +73,10 @@
           name="listing[location]"
           placeholder="Enter location"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter a location</div>
       </div>
       <button class="btn btn-dark add-btn mt-3">Add</button>
     </form>
